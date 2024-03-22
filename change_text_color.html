@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text color</title>
+    <style>
+      h1 {
+        color: brown;
+        text-align: center;
+        font-size: 30px;
+      }
+      .name {
+        color: orange;
+      }
+      button:active {
+        scale: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jagadeesh</h1>
+    <button>Change color</button>
+
+    <!-- convert to cm -->
+    <br />
+
+    <input type="text" id="convertinput" />
+    <button id="convertbutton" onclick="converttocm()">Convert to cm</button>
+    <div id="convertoutput">0</div>
+  </body>
+  <script>
+    var title = document.querySelector("h1");
+    var btn = document.querySelector("button");
+
+    btn.onclick = function changecolor() {
+      title.classList.toggle("name");
+    };
+
+    // window.location.reload(btn.onclick)
+
+    function converttocm() {
+      var convertinput = Number(document.getElementById("convertinput").value);
+      var convertbutton = document.getElementById("convertbutton");
+      var convertoutput = document.getElementById("convertoutput");
+      var cm = convertinput / 2.45;
+      convertoutput.innerHTML = cm.toFixed(3)+"inches";
+      alert(convertinput);
+    }
+  </script>
+</html>
