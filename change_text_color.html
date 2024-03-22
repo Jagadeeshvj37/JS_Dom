@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text color</title>
     <style>
+        body{
+            text-align: center;
+            margin: 30px;
+        }
       h1 {
         color: brown;
         text-align: center;
@@ -12,6 +16,9 @@
       }
       .name {
         color: orange;
+      }
+      .anothername{
+        color: green;
       }
       button:active {
         scale: 0.7;
@@ -45,7 +52,12 @@
       var convertoutput = document.getElementById("convertoutput");
       var cm = convertinput / 2.45;
       convertoutput.innerHTML = cm.toFixed(3)+"inches";
-      alert(convertinput);
+      if(convertinput<20){
+      convertoutput.classList.add("name");
+      }
+      else{
+      convertoutput.classList.add("anothername")
+      }
     }
   </script>
 </html>
