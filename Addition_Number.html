@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addition</title>
+  </head>
+  <body>
+    <h1>Addition of Number</h1>
+    <br />
+    <input id="inputone" type="text" placeholder="input 1" />
+    <input id="inputsecond" type="text" placeholder="input 2" />
+    <button id="addbtn">Add</button>
+    <h3 id="addresult">0</h3>
+  </body>
+  <script>
+    addbtn.onclick = function addition() {
+      var num1 = Number(document.getElementById("inputone").value);
+      var num2 = Number(document.getElementById("inputsecond").value);
+      var addbtn = document.getElementById("addbtn");
+      var addres = document.getElementById("addresult");
+      addres.innerHTML = num1 + num2;
+      if (addres.innerHTML >=0 && addres.innerHTML <=5) {
+        addres.style.color = "red";
+      } else if(addres.innerHTML>5 && addres.innerHTML<=10){
+        addres.style.color = "Yellow";
+      } 
+      else{
+        addres.style.color="Green"
+      }
+    };
+  </script>
+</html>
